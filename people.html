@@ -95,24 +95,10 @@
             background-image: linear-gradient(to right, rgba(91, 133, 130, 0.05) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(91, 133, 130, 0.05) 1px, transparent 1px);
         }
-
-        /* Custom Scrollbar for lists */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f5f5f4;
-            border-radius: 10px;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background-color: #d6d3d1;
-            border-radius: 10px;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background-color: #a8a29e;
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -120,7 +106,7 @@
 <body
     class="min-h-screen bg-beige-300/20 bg-grid-pattern font-sans text-stone-800 selection:bg-mint-500 selection:text-primary-900">
 
-    <!-- Background Watermark -->
+    <!-- Background Watermark (Restored) -->
     <div class="fixed inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden">
         <img src="IITG_logo.png" class="w-[35rem] max-w-none opacity-10" alt="Background Logo">
     </div>
@@ -193,248 +179,478 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 space-y-16">
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 space-y-20">
 
-        <!-- Team Photo Banner -->
-        <div
-            class="relative rounded-[2.5rem] overflow-hidden shadow-xl shadow-stone-200/50 border border-white group animate-fade-in max-w-4xl mx-auto">
-            <img src="people.png" alt="Research Group Team Photo"
-                class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
-            <div
-                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
-                <p
-                    class="text-white font-display font-medium text-lg bg-black/30 backdrop-blur-md px-6 py-2 rounded-full border border-white/20">
-                    Remote Sensing & Rock Physics Research Group</p>
+        <!-- Header Section -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 animate-fade-in">
+            <div>
+                <h1 class="font-display font-extrabold text-3xl md:text-4xl text-stone-900">
+                    <img src="IITG_logo.png" class="inline-block w-8 h-8 md:w-10 md:h-10 mr-2 mb-1 align-baseline"
+                        alt="IITG Logo">
+                    Our Research Group
+                </h1>
+                <p class="text-stone-500 mt-2 font-medium">Meet the researchers at Remote Sensing & Rock Physics Lab</p>
             </div>
         </div>
 
-        <!-- PhD Students Section -->
+        <!-- SECTION 1: Postdoctoral Researchers -->
         <section class="animate-slide-up">
             <div class="flex items-center gap-4 mb-8">
-                <div
-                    class="w-12 h-12 rounded-2xl bg-secondary-50 text-secondary-600 flex items-center justify-center shadow-sm">
-                    <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center shadow-sm">
+                    <i data-lucide="award" class="w-5 h-5"></i>
                 </div>
-                <div>
-                    <h2 class="font-display font-bold text-3xl text-stone-900">PhD Students</h2>
-                    <p class="text-stone-500 font-medium">Research Scholars & Alumni</p>
-                </div>
+                <h2 class="font-display font-bold text-2xl text-stone-900">Postdoctoral Researchers</h2>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Student 1 -->
-                <div
-                    class="group bg-white p-8 rounded-[2rem] border border-stone-100 shadow-sm hover:shadow-xl hover:shadow-stone-200/50 hover:border-primary-100 transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-400 group-hover:bg-primary-100 group-hover:text-primary-700 transition-colors">
-                            <i data-lucide="user" class="w-5 h-5"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Thesniya P. M. -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-primary-100 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="relative w-20 h-20 shrink-0 image-container">
+                            <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Thesniya+PM&background=random" class="w-full h-full rounded-full object-cover border-2 border-primary-100" alt="Thesniya P. M.">
                         </div>
-                        <span
-                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-50 text-green-700 border border-green-100">
-                            Graduated
-                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-primary-700 transition-colors">Thesniya P. M.</h3>
+                            <span class="inline-block px-2 py-0.5 bg-primary-50 text-primary-700 text-xs font-bold rounded-full mt-1">DST-INSPIRE Fellow</span>
+                        </div>
                     </div>
-                    <h3 class="font-display font-bold text-xl text-stone-900 mb-1">Ande Bhuvaneshwari Devi</h3>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-xs font-bold uppercase tracking-wider text-primary-600">Supervisor</span>
-                    </div>
-                    <div class="pt-4 border-t border-stone-100">
-                        <p class="text-sm text-stone-600 leading-relaxed font-light">
-                            <span class="font-semibold text-stone-900">Topic:</span> Modelling of Groundwater Recharge
-                            in the Context of Temporal Changes in Land Use and Land Cover
-                        </p>
+                    <p class="text-xs font-bold text-stone-400 uppercase tracking-wide mb-1">Research Area</p>
+                    <p class="text-sm text-stone-600 leading-relaxed mb-4">Chemical heterogeneities of the lunar crust; Chemistry of spinels on the Moon.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://scholar.google.com/citations?user=3cPf0iQAAAAJ&hl=en&oi=ao" target="_blank" class="text-stone-400 hover:text-primary-600 transition-colors"><i data-lucide="graduation-cap" class="w-5 h-5"></i></a>
+                        <a href="www.linkedin.com/in/thesniya-pm-0a33b0144" target="_blank" class="text-stone-400 hover:text-primary-600 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
                     </div>
                 </div>
 
-                <!-- Student 2 -->
-                <div
-                    class="group bg-white p-8 rounded-[2rem] border border-stone-100 shadow-sm hover:shadow-xl hover:shadow-stone-200/50 hover:border-primary-100 transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-400 group-hover:bg-primary-100 group-hover:text-primary-700 transition-colors">
-                            <i data-lucide="user" class="w-5 h-5"></i>
+                <!-- Priyanka Kumari -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-primary-100 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="relative w-20 h-20 shrink-0 image-container">
+                            <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Priyanka+K&background=random" class="w-full h-full rounded-full object-cover border-2 border-primary-100" alt="Priyanka Kumari">
                         </div>
-                        <span
-                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-50 text-green-700 border border-green-100">
-                            Graduated
-                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-primary-700 transition-colors">Priyanka Kumari</h3>
+                            <span class="inline-block px-2 py-0.5 bg-primary-50 text-primary-700 text-xs font-bold rounded-full mt-1">Postdoctoral Researcher</span>
+                        </div>
                     </div>
-                    <h3 class="font-display font-bold text-xl text-stone-900 mb-1">Siddarth Garia</h3>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-xs font-bold uppercase tracking-wider text-primary-600">Co-Supervisor</span>
-                    </div>
-                    <div class="pt-4 border-t border-stone-100">
-                        <p class="text-sm text-stone-600 leading-relaxed font-light">
-                            <span class="font-semibold text-stone-900">Topic:</span> Rock Physics Modeling of
-                            Sedimentary Rocks
-                        </p>
+                    <p class="text-xs font-bold text-stone-400 uppercase tracking-wide mb-1">Research Area</p>
+                    <p class="text-sm text-stone-600 leading-relaxed mb-4">Explainability in Classification and Unmixing of CRISM Hyperspectral Data.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://scholar.google.com/citations?user=MDqXWJAAAAAJ&hl=en" target="_blank" class="text-stone-400 hover:text-primary-600 transition-colors"><i data-lucide="graduation-cap" class="w-5 h-5"></i></a>
+                        <a href="https://github.com/SampritiSoor/CRISM_mineralMapping" target="_blank" class="text-stone-400 hover:text-primary-600 transition-colors"><i data-lucide="globe" class="w-5 h-5"></i></a>
                     </div>
                 </div>
 
-                <!-- Student 3 -->
-                <div
-                    class="group bg-white p-8 rounded-[2rem] border border-stone-100 shadow-sm hover:shadow-xl hover:shadow-stone-200/50 hover:border-primary-100 transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-400 group-hover:bg-primary-100 group-hover:text-primary-700 transition-colors">
-                            <i data-lucide="user" class="w-5 h-5"></i>
-                        </div>
-                        <span
-                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-primary-50 text-primary-700 border border-primary-100">
-                            Ongoing
-                        </span>
-                    </div>
-                    <h3 class="font-display font-bold text-xl text-stone-900 mb-1">Adnan Ahmed</h3>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-xs font-bold uppercase tracking-wider text-primary-600">Supervisor</span>
-                    </div>
-                    <div class="pt-4 border-t border-stone-100">
-                        <p class="text-sm text-stone-600 leading-relaxed font-light">
-                            <span class="font-semibold text-stone-900">Topic:</span> Spectroscopy of Rocks and Minerals
-                            for Terrestrial and Planetary Exploration
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Student 4 -->
-                <div
-                    class="group bg-white p-8 rounded-[2rem] border border-stone-100 shadow-sm hover:shadow-xl hover:shadow-stone-200/50 hover:border-primary-100 transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-400 group-hover:bg-primary-100 group-hover:text-primary-700 transition-colors">
-                            <i data-lucide="user" class="w-5 h-5"></i>
-                        </div>
-                        <span
-                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-primary-50 text-primary-700 border border-primary-100">
-                            Ongoing
-                        </span>
-                    </div>
-                    <h3 class="font-display font-bold text-xl text-stone-900 mb-1">Arnab Kumar Pal</h3>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-xs font-bold uppercase tracking-wider text-primary-600">Supervisor</span>
-                    </div>
-                    <div class="pt-4 border-t border-stone-100">
-                        <p class="text-sm text-stone-600 leading-relaxed font-light">
-                            <span class="font-semibold text-stone-900">Topic:</span> An Integrated Study on Remote
-                            Sensing and Geophysical Techniques for Critical Zone Monitoring
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- Other Students Grid -->
-        <div class="grid lg:grid-cols-2 gap-8 animate-slide-up" style="animation-delay: 0.2s;">
-            <!-- M.Tech Column -->
-            <div class="space-y-6">
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="p-2 bg-stone-100 rounded-lg text-stone-600">
-                        <i data-lucide="book-open" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-display font-bold text-2xl text-stone-900">M.Tech Students</h3>
+        <!-- SECTION 2: PhD Scholars -->
+        <section class="animate-slide-up" style="animation-delay: 0.2s;">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-10 h-10 rounded-xl bg-secondary-100 text-secondary-600 flex items-center justify-center shadow-sm">
+                    <i data-lucide="users" class="w-5 h-5"></i>
                 </div>
-
-                <!-- Custom Card for M.Tech List -->
-                <div
-                    class="bg-white rounded-[2rem] p-8 border border-stone-100 shadow-sm h-full group hover:shadow-md transition-all">
-                    <ul class="space-y-8">
-                        <!-- Item -->
-                        <li
-                            class="relative pl-8 border-l-2 border-stone-100 hover:border-primary-300 transition-colors">
-                            <div
-                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-stone-200 border-2 border-white group-hover:bg-primary-500 transition-colors">
-                            </div>
-                            <div class="mb-1 flex items-center gap-3">
-                                <span class="text-xs font-bold text-stone-400 font-mono">2018</span>
-                                <h4 class="font-bold text-stone-900 text-lg">Arnab Kumar Pal</h4>
-                            </div>
-                            <p class="text-sm text-stone-500 font-light">Porosity and Permeability Estimation Using
-                                Digital Image Analysis</p>
-                        </li>
-
-                        <li
-                            class="relative pl-8 border-l-2 border-stone-100 hover:border-primary-300 transition-colors">
-                            <div
-                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-stone-200 border-2 border-white group-hover:bg-primary-500 transition-colors">
-                            </div>
-                            <div class="mb-1 flex items-center gap-3">
-                                <span class="text-xs font-bold text-stone-400 font-mono">2019</span>
-                                <h4 class="font-bold text-stone-900 text-lg">Patel Raj Ramanbhai</h4>
-                            </div>
-                            <p class="text-sm text-stone-500 font-light">Lithological Mapping Anaysis of Tharsis Montes
-                                of Mars</p>
-                        </li>
-
-                        <li
-                            class="relative pl-8 border-l-2 border-stone-100 hover:border-primary-300 transition-colors">
-                            <div
-                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-stone-200 border-2 border-white group-hover:bg-primary-500 transition-colors">
-                            </div>
-                            <div class="mb-1 flex items-center gap-3">
-                                <span class="text-xs font-bold text-stone-400 font-mono">2020</span>
-                                <h4 class="font-bold text-stone-900 text-lg">Shailesh Kumar Yadav</h4>
-                            </div>
-                            <p class="text-sm text-stone-500 font-light">Experimental Analysis on Vegetation Stress</p>
-                        </li>
-                    </ul>
-                </div>
+                <h2 class="font-display font-bold text-2xl text-stone-900">Research Scholars (PhD)</h2>
             </div>
 
-            <!-- B.Tech Column -->
-            <div class="space-y-6">
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="p-2 bg-stone-100 rounded-lg text-stone-600">
-                        <i data-lucide="users" class="w-5 h-5"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Dr. Adnan Ahmad -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Adnan+A&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Dr. Adnan Ahmad</h3>
+                            <p class="text-xs text-stone-500">PhD (2018-2025)</p>
+                        </div>
                     </div>
-                    <h3 class="font-display font-bold text-2xl text-stone-900">B.Tech Students</h3>
-                </div>
-
-                <!-- Dark Card for B.Tech List for contrast -->
-                <div
-                    class="bg-gradient-to-br from-primary-900 to-primary-800 rounded-[2rem] p-8 text-white shadow-xl h-full relative overflow-hidden">
-                    <div
-                        class="absolute top-0 right-0 p-32 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
-                    </div>
-                    <div
-                        class="absolute bottom-0 left-0 p-20 bg-secondary-500/20 rounded-full blur-3xl -ml-10 -mb-10 pointer-events-none">
-                    </div>
-
-                    <div class="relative z-10 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
-                        <ul class="space-y-6">
-                            <li class="pb-4 border-b border-white/10 last:border-0">
-                                <div class="flex justify-between items-start mb-1">
-                                    <h4 class="font-bold text-lg text-white">Vivek Vardhan Maddali</h4>
-                                    <span
-                                        class="text-xs bg-white/20 px-2 py-1 rounded-md text-white/80 font-mono">2017</span>
-                                </div>
-                                <p class="text-sm text-stone-400 font-light">Lithological Discrimination of Tycho Crater
-                                </p>
-                            </li>
-
-                            <li class="pb-4 border-b border-white/10 last:border-0">
-                                <div class="flex justify-between items-start mb-1">
-                                    <h4 class="font-bold text-lg text-white">Gorakhnath Nigam</h4>
-                                    <span
-                                        class="text-xs bg-white/20 px-2 py-1 rounded-md text-white/80 font-mono">2018</span>
-                                </div>
-                                <p class="text-sm text-stone-400 font-light">Porosity Modelling Using Image Analysis
-                                    from SEM Image</p>
-                            </li>
-
-                            <li class="pb-4 border-b border-white/10 last:border-0">
-                                <div class="flex justify-between items-start mb-1">
-                                    <h4 class="font-bold text-lg text-white">Sajal Pachauri</h4>
-                                    <span
-                                        class="text-xs bg-white/20 px-2 py-1 rounded-md text-white/80 font-mono">2018</span>
-                                </div>
-                                <p class="text-sm text-stone-400 font-light">Porosity Modelling for Sandstones</p>
-                            </li>
-                        </ul>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Thesis:</strong> Spectroscopy of Rocks and Minerals for Terrestrial and Planetary Exploration.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://www.linkedin.com/in/adnan-ahmad-phd-a2432a121/" target="_blank" class="text-stone-400 hover:text-secondary-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
                     </div>
                 </div>
+
+                <!-- Shreya Shrikant Katre -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                            <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Shreya+K&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Shreya Shrikant Katre</h3>
+                            <p class="text-xs text-stone-500">Fulbright-Kalam Climate Fellow</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Thesis:</strong> A Critical Assessment of Geological Carbon Sequestration for Selected Rock Formations in India.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://scholar.google.com/citations?user=0jfmZO8AAAAJ&hl=en" target="_blank" class="text-stone-400 hover:text-secondary-600"><i data-lucide="graduation-cap" class="w-4 h-4"></i></a>
+                        <a href="https://www.linkedin.com/in/shreya-katre-6034001ba/" target="_blank" class="text-stone-400 hover:text-secondary-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Arnab Kumar Pal -->
+                 <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Arnab+KP&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Arnab Kumar Pal</h3>
+                            <p class="text-xs text-stone-500">PhD Scholar</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Thesis:</strong> Critical Zone Evaluation of a Tropical Hillslope Using Remote Sensing and Geophysical Methods.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://scholar.google.co.in/citations?user=KVi4mUAAAAAJ&hl=en" class="text-stone-400 hover:text-secondary-600"><i data-lucide="graduation-cap" class="w-4 h-4"></i></a>
+                        <a href="https://www.linkedin.com/in/arnab-kumar-pal-a56122a4/" class="text-stone-400 hover:text-secondary-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Ande Bhuvaneswari Devi -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Ande+BD&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Ande Bhuvaneswari Devi</h3>
+                            <p class="text-xs text-stone-500">PhD Scholar</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Thesis:</strong> Modelling of Groundwater Recharge In the Context of Changing Land Use Land Cover.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://scholar.google.com/citations?user=YjNhoL4AAAAJ&hl=en" class="text-stone-400 hover:text-secondary-600"><i data-lucide="graduation-cap" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Siddharth Garia -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Siddharth+G&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Siddharth Garia</h3>
+                            <p class="text-xs text-stone-500">PhD Scholar</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Thesis:</strong> Rock Physics Modelling and Seismic Inversion for Reservoir Characterisation.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://scholar.google.com/citations?user=kSANtdcAAAAJ&hl=en" class="text-stone-400 hover:text-secondary-600"><i data-lucide="graduation-cap" class="w-4 h-4"></i></a>
+                        <a href="https://www.linkedin.com/in/siddarth-gaaria-b182956a/" class="text-stone-400 hover:text-secondary-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Dhritilekha Deka -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Dhritilekha+D&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Dhritilekha Deka</h3>
+                            <p class="text-xs text-stone-500">PhD Scholar</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Thesis:</strong> Augmentation of qualitative groundwater recharge with phytoremediation of contaminated soil.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://scholar.google.com/citations?user=oTflBREAAAAJ&hl=en&oi=ao" class="text-stone-400 hover:text-secondary-600"><i data-lucide="graduation-cap" class="w-4 h-4"></i></a>
+                        <a href="https://dhritilekha.github.io/" class="text-stone-400 hover:text-secondary-600"><i data-lucide="globe" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Uma Narayan M -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Uma+N&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Uma Narayan M</h3>
+                            <p class="text-xs text-stone-500">PhD Scholar</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Thesis:</strong> Morphotectonic Analysis of The Brahmaputra River System.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://scholar.google.com/citations?hl=en&user=YTLNdDMAAAAJ" class="text-stone-400 hover:text-secondary-600"><i data-lucide="graduation-cap" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Madhusmita Nanda -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Madhusmita+N&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Madhusmita Nanda</h3>
+                            <span class="inline-block px-2 py-0.5 bg-secondary-50 text-secondary-600 text-[10px] font-bold rounded-full">PMRF Scholar</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Research:</strong> Quantification of snowmelt contribution in surface runoff and subsurface water using stable isotope study.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                         <a href="https://www.linkedin.com/in/madhusmita-nanda-1b5204112/" class="text-stone-400 hover:text-secondary-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                        <a href="https://scholar.google.com/citations?hl=en&user=GEwv22YAAAAJ" class="text-stone-400 hover:text-secondary-600"><i data-lucide="graduation-cap" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+                
+                 <!-- Shiwangee -->
+                 <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Shiwangee&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Shiwangee</h3>
+                            <span class="inline-block px-2 py-0.5 bg-stone-100 text-stone-600 text-[10px] font-bold rounded-full">JRF-GATE</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Work:</strong> Hyperspectral Image Analysis of Banded Iron Formation (BIFs) on Mars. IITB-Monash Joint PhD Program.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://www.linkedin.com/in/shiwangee-b07a94201" class="text-stone-400 hover:text-secondary-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Tapan Jyoti Sharma -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Tapan+JS&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Tapan Jyoti Sharma</h3>
+                            <p class="text-xs text-stone-500">Research Scholar (Joined 2024)</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Work:</strong> Near surface geophysics.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="www.linkedin.com/in/tapanjyoti-sharma-965461202" class="text-stone-400 hover:text-secondary-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mohammad Ahsan Sayeed -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Mohammad+AS&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Mohammad Ahsan Sayeed</h3>
+                            <p class="text-xs text-stone-500">Research Scholar (Joined 2024)</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Research:</strong> Hydrogeology and Geoinformatics. Impact of Land Use on Groundwater Level Dynamics.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://www.linkedin.com/in/mahsan0417/" class="text-stone-400 hover:text-secondary-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                 <!-- Bijay Kumar Nayak -->
+                 <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Bijay+KN&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Bijay Kumar Nayak</h3>
+                            <p class="text-xs text-stone-500">Research Scholar (Joined 2025)</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Research:</strong> Geological Carbon Sequestration.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://scholar.google.com/citations?hl=en&user=z9P4RWEAAAAJ" class="text-stone-400 hover:text-secondary-600"><i data-lucide="graduation-cap" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sujay Kumar Panda -->
+                <div class="group bg-white rounded-[1.5rem] p-6 border border-stone-100 shadow-sm hover:shadow-xl hover:border-secondary-200 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-stone-100 overflow-hidden shrink-0 image-container">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Sujay+KP&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-stone-900 group-hover:text-secondary-600 transition-colors">Sujay Kumar Panda</h3>
+                            <p class="text-xs text-stone-500">Research Scholar (Joined 2025)</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-4"><strong>Research:</strong> Planetary Remote Sensing.</p>
+                    <div class="flex gap-3 mt-auto pt-4 border-t border-stone-100">
+                        <a href="https://www.linkedin.com/in/sujay-kumar-panda-27b99b217/" class="text-stone-400 hover:text-secondary-600"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </section>
+
+        <!-- SECTION 3: M.Tech Scholars -->
+        <section class="animate-slide-up" style="animation-delay: 0.3s;">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-10 h-10 rounded-xl bg-mint-500/20 text-primary-700 flex items-center justify-center shadow-sm">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <h2 class="font-display font-bold text-2xl text-stone-900">M.Tech Scholars</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Nitesh K -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-100 hover:border-primary-200 transition-colors shadow-sm group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden image-container shrink-0">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Nitesh+K&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Nitesh K</h4>
+                            <p class="text-xs text-stone-500">M.Tech 2022-24</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-stone-600 italic mb-2">"Detecting Hydrocarbon Microseepage Using Multispectral and Hyperspectral Images"</p>
+                    <p class="text-xs text-primary-700 font-semibold mb-2">Geospatial Data Scientist, SwanSAT</p>
+                    <div class="flex gap-3">
+                         <a href="https://www.linkedin.com/in/nitesh4004/" class="text-primary-600 hover:text-primary-800"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                         <a href="https://nitesh4004.github.io/" class="text-primary-600 hover:text-primary-800"><i data-lucide="globe" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Shwet Kamal -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-100 hover:border-primary-200 transition-colors shadow-sm group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden image-container shrink-0">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Shwet+K&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Shwet Kamal</h4>
+                            <p class="text-xs text-stone-500">M.Tech 2022-24</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-stone-600 italic mb-2">"Modelling groundwater level using BGS GIS and GRACE data"</p>
+                    <p class="text-xs text-primary-700 font-semibold mb-2">Guest Asst. Professor, Motihari College of Engineering</p>
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/in/shwetiitg" class="text-primary-600 hover:text-primary-800"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Meenatchi G -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-100 hover:border-primary-200 transition-colors shadow-sm group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden image-container shrink-0">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Meenatchi+G&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Meenatchi G</h4>
+                            <p class="text-xs text-stone-500">M.Tech 2022-24</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-stone-600 italic mb-2">"Thermophysical modelling of Lunar South Pole"</p>
+                    <p class="text-xs text-primary-700 font-semibold mb-2">Corporate Management Trainee, Fugro</p>
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/in/meenatchiganesh/" class="text-primary-600 hover:text-primary-800"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Km Divya Gupta -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-100 hover:border-primary-200 transition-colors shadow-sm group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden image-container shrink-0">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Divya+G&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Km Divya Gupta</h4>
+                            <p class="text-xs text-stone-500">M.Tech 2023-25</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-stone-600 italic mb-2">"Geochemical modelling for Carbon Mineralisation"</p>
+                    <a href="https://www.linkedin.com/in/divya-gupta-4ba6441a5/" class="text-primary-600 text-xs hover:underline">LinkedIn Profile</a>
+                </div>
+
+                <!-- Lakshmi Priya P. B. -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-100 hover:border-primary-200 transition-colors shadow-sm group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden image-container shrink-0">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Lakshmi+P&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Lakshmi Priya P. B.</h4>
+                            <p class="text-xs text-stone-500">M.Tech 2023-25</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-stone-600 italic mb-2">"Modelling the Dynamic Behaviour of Structural Traps for Carbon Sequestration"</p>
+                    <a href="https://www.linkedin.com/in/lakshmi-priya-p-b-074baa1bb" class="text-primary-600 text-xs hover:underline">LinkedIn Profile</a>
+                </div>
+
+                <!-- Amarjeet Kumar -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-100 hover:border-primary-200 transition-colors shadow-sm group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden image-container shrink-0">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Amarjeet+K&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Amarjeet Kumar</h4>
+                            <p class="text-xs text-stone-500">M.Tech 2024-26</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-stone-600 italic mb-2">"Assessment of Geothermal Potential Using COMSOL Multiphysics Modeling"</p>
+                    <a href="https://www.linkedin.com/in/amarjeet-kumar-970139215" class="text-primary-600 text-xs hover:underline">LinkedIn Profile</a>
+                </div>
+
+                <!-- Ashok Kumar Yadav -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-100 hover:border-primary-200 transition-colors shadow-sm group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden image-container shrink-0">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Ashok+K&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Ashok Kumar Yadav</h4>
+                            <p class="text-xs text-stone-500">M.Tech 2024-26</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-stone-600 italic mb-2">"Prediction of lithofacies from Well Log data using Machine learning Techniques"</p>
+                    <a href="https://www.linkedin.com/in/ashokkumaryadaviitg" class="text-primary-600 text-xs hover:underline">LinkedIn Profile</a>
+                </div>
+
+                 <!-- Subhankar Dey -->
+                 <div class="bg-white rounded-2xl p-6 border border-stone-100 hover:border-primary-200 transition-colors shadow-sm group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden image-container shrink-0">
+                             <!-- PROFILE PIC: Change src to your image path -->
+                            <img src="https://ui-avatars.com/api/?name=Subhankar+D&background=random" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Subhankar Dey</h4>
+                            <p class="text-xs text-stone-500">M.Tech 2024-26</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-stone-600 italic mb-2">"CNN driven mapping of Critical Zone Architecture"</p>
+                    <a href="https://www.linkedin.com/in/subhankardey02" class="text-primary-600 text-xs hover:underline">LinkedIn Profile</a>
+                </div>
+
+            </div>
+        </section>
 
     </main>
 
@@ -446,7 +662,7 @@
                 <span class="font-display font-bold text-lg">AN</span>
             </div>
             <p class="font-display font-bold text-stone-900 text-xl mb-2">Dr. Archana M Nair</p>
-            <p class="text-stone-500 text-sm mb-8 font-medium">Remote Sensing & Rock Physics Laboratory</p>
+            <p class="text-stone-500 text-sm mb-8 font-medium">Remote Sensing &amp; Rock Physics Laboratory</p>
 
             <div class="flex justify-center gap-8 text-sm font-semibold text-stone-400 mb-8">
                 <a href="index.html" class="hover:text-primary-700 transition-colors">Home</a>
